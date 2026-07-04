@@ -159,7 +159,7 @@ async def next_id(collection: str, prefix: str, pad: int) -> str:
     return f"{prefix}-{str(num).zfill(pad)}"
 
 # ---------- Auth Endpoints ----------
-@api_router.post("/auth/login")
+@api_router.post("/api/auth/login")
 async def login(payload: LoginRequest):
     identity = payload.identity.strip()
     if "@" in identity:
